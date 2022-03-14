@@ -1,9 +1,10 @@
 package com.example.demo.repo;
 
-public class RamadanRepo {
+import org.springframework.data.jpa.repository.JpaRepository;
 
-	public RamadanRepo() {
-		// TODO Auto-generated constructor stub
-	}
+import com.example.demo.Entity.Ramadan;
+
+
+public interface RamadanRepo extends JpaRepository<Ramadan, Long> {
 
 }

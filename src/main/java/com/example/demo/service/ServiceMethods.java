@@ -1,9 +1,19 @@
 package com.example.demo.service;
 
-public class ServiceMethods {
+import java.util.List;
 
-	public ServiceMethods() {
-		// TODO Auto-generated constructor stub
+public interface ServiceMethods<T> {
+	T create(T ramadan);
+	
+	List<T> readAll();
+	
+	T readById(long id);
+	
+	T update(long id, T ramadan);
+	
+	boolean delete(long id);
+		
+
 	}
 
-}
+
