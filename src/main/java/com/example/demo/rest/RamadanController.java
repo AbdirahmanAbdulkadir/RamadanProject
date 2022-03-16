@@ -1,4 +1,4 @@
-package com.example.demo.Controller;
+package com.example.demo.rest;
 
 import java.util.List;
 
@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.demo.Entity.Ramadan;
+import com.example.demo.entity.Ramadan;
 import com.example.demo.service.RamadanService;
 
 
@@ -28,9 +28,9 @@ public class RamadanController {
 		this.service=service;
 		}
 
-	@PostMapping("/create")
+	@PostMapping("/addDay")
 	public ResponseEntity<Ramadan> createRamadan(@RequestBody Ramadan ramadan) {
-		return new ResponseEntity<Ramadan>(this.service.create(ramadan), HttpStatus.CREATED);
+		return new ResponseEntity<Ramadan>(this.service.addDay(ramadan), HttpStatus.CREATED);
 	}
 
 	@GetMapping("/readById/{id}")
@@ -38,9 +38,9 @@ public class RamadanController {
 		return new ResponseEntity<Ramadan>(this.service.readById(id), HttpStatus.OK);
 	}
 
-	@DeleteMapping("/delete/{id}")
+	@DeleteMapping("/deleteDay/{id}")
 	public ResponseEntity<Boolean> deleteRamadan(@PathVariable long id) {
-		return (this.service.delete(id)) ? new ResponseEntity<Boolean>(HttpStatus.NO_CONTENT)
+		return (this.service.deleteDay(id)) ? new ResponseEntity<Boolean>(HttpStatus.NO_CONTENT)
 				: new ResponseEntity<Boolean>(HttpStatus.NOT_FOUND);
 	}
 
@@ -50,9 +50,9 @@ public class RamadanController {
 
 	}
 
-	@PutMapping("/update/{id}")
+	@PutMapping("/updateDay/{id}")
 	public ResponseEntity<Ramadan> updateRamadan(@PathVariable long id, @RequestBody Ramadan ramadan) {
-		return new ResponseEntity<Ramadan>(this.service.update(id, ramadan), HttpStatus.ACCEPTED);
+		return new ResponseEntity<Ramadan>(this.service.updateDay(id, ramadan), HttpStatus.ACCEPTED);
 
 	}
 

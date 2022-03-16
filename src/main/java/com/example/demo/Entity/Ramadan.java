@@ -1,4 +1,4 @@
-package com.example.demo.Entity;
+package com.example.demo.entity;
 
 import java.util.Objects;
 
@@ -120,9 +120,16 @@ public class Ramadan {
 			Isha = isha;
 		}
 
+		
+		@Override
+		public String toString() {
+			return "Ramadan [id=" + id + ", day=" + day + ", Fajr=" + Fajr + ", Dhur=" + Dhur + ", asr=" + asr
+					+ ", Maghrib=" + Maghrib + ", Isha=" + Isha + "]";
+		}
+
 		@Override
 		public int hashCode() {
-			return Objects.hash(Dhur, Fajr, Isha, Maghrib, asr, day, id);
+			return Objects.hash(Dhur, Fajr, Isha, Maghrib, asr, day);
 		}
 
 		@Override
@@ -136,8 +143,12 @@ public class Ramadan {
 			Ramadan other = (Ramadan) obj;
 			return Objects.equals(Dhur, other.Dhur) && Objects.equals(Fajr, other.Fajr)
 					&& Objects.equals(Isha, other.Isha) && Objects.equals(Maghrib, other.Maghrib)
-					&& Objects.equals(asr, other.asr) && day == other.day && id == other.id;
+					&& Objects.equals(asr, other.asr) && day == other.day;
 		}
+
+		
+
+	
 
 		
 		

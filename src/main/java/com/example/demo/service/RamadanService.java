@@ -5,7 +5,7 @@ import java.util.Optional;
 
 import org.springframework.stereotype.Service;
 
-import com.example.demo.Entity.Ramadan;
+import com.example.demo.entity.Ramadan;
 import com.example.demo.repo.RamadanRepo;
 
 
@@ -21,7 +21,7 @@ public class RamadanService implements ServiceMethods<Ramadan> {
 	
 	
 	@Override
-	public Ramadan create(Ramadan ramadan) {
+	public Ramadan addDay(Ramadan ramadan) {
 		return this.repo.save(ramadan);
 	}
 
@@ -40,7 +40,7 @@ public class RamadanService implements ServiceMethods<Ramadan> {
 	}
 
 	@Override
-	public Ramadan update(long id, Ramadan ramadan) {
+	public Ramadan updateDay(long id, Ramadan ramadan) {
 		Optional<Ramadan> existingRamadan = this.repo.findById(id);
 		if(existingRamadan.isPresent()) {
 			Ramadan exists = existingRamadan.get();
@@ -56,7 +56,7 @@ public class RamadanService implements ServiceMethods<Ramadan> {
 	}
 
 	@Override
-	public boolean delete(long id) {
+	public boolean deleteDay(long id) {
 		this.repo.deleteById(id);
 		return !this.repo.existsById(id);
 	}
