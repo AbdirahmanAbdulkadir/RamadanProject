@@ -5,7 +5,7 @@ import java.util.Optional;
 
 import org.springframework.stereotype.Service;
 
-import com.example.demo.Entity.Ramadan;
+import com.example.demo.entity.Ramadan;
 import com.example.demo.repo.RamadanRepo;
 
 
