@@ -24,7 +24,7 @@ public class RamadanUnitTest {
 		
 		ramadan.setId(1L);
 		ramadan.setDay(4);
-		ramadan.setFajr("5:30 AM");
+		ramadan.setFajr("5:31 AM");
 		ramadan.setDhur("11:30 AM");
 		ramadan.setAsr("3:30 PM");
 		ramadan.setMaghrib("5:30 PM");
@@ -44,7 +44,7 @@ public class RamadanUnitTest {
 		
 		assertEquals(ramadan.getId(),1L);
 		assertEquals(ramadan.getDay(),4);
-		assertEquals(ramadan.getFajr(),"5:30 AM");
+		assertEquals(ramadan.getFajr(),"5:31 AM");
 		assertEquals(ramadan.getDhur(),"11:30 AM");
 		assertEquals(ramadan.getAsr(),"3:30 PM");
 		assertEquals(ramadan.getMaghrib(),"5:30 PM");
