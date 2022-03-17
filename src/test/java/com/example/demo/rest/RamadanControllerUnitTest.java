@@ -3,6 +3,9 @@ package com.example.demo.rest;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.Mockito.times;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -39,7 +42,7 @@ public class RamadanControllerUnitTest {
 	public void UpdateRamadanTest() {
 		Ramadan ramadan = new Ramadan(1, "4:19 AM","12:11 PM","3:16 PM","5:16 PM","7:20 PM");
 		
-		Mockito.when(this.service.addDay(ramadan)).thenReturn(ramadan);
+		Mockito.when(this.service.updateDay(1, ramadan)).thenReturn(ramadan);
 		
 		ResponseEntity<Ramadan> response = new ResponseEntity<Ramadan>(ramadan, HttpStatus.ACCEPTED);
 		
@@ -52,7 +55,7 @@ public class RamadanControllerUnitTest {
 	public void ReadByIdTest() {
 		Ramadan ramadan = new Ramadan(1, "4:19 AM","12:11 PM","3:16 PM","5:16 PM","7:20 PM");
 		
-		Mockito.when(this.service.addDay(ramadan)).thenReturn(ramadan);
+		Mockito.when(this.service.readById(1)).thenReturn(ramadan);
 		
 		ResponseEntity<Ramadan> response = new ResponseEntity<Ramadan>(ramadan, HttpStatus.OK);
 		
@@ -64,10 +67,11 @@ public class RamadanControllerUnitTest {
 	@Test
 	public void readAllRamadansTest() {
 		Ramadan ramadan = new Ramadan(1, "4:19 AM","12:11 PM","3:16 PM","5:16 PM","7:20 PM");
+		List<Ramadan> prayertimes = new ArrayList<Ramadan>();
+		prayertimes.add(ramadan);
+		Mockito.when(this.service.readAll()).thenReturn(prayertimes);
 		
-		Mockito.when(this.service.addDay(ramadan)).thenReturn(ramadan);
-		
-		ResponseEntity<Ramadan> response = new ResponseEntity<Ramadan>(ramadan, HttpStatus.OK);
+		ResponseEntity<List<Ramadan>> response = new ResponseEntity<List<Ramadan>>(prayertimes, HttpStatus.OK);
 		
 		assertThat(response).isEqualTo(this.controller.readAllRamadans());
 		
@@ -78,9 +82,9 @@ public class RamadanControllerUnitTest {
 	public void deleteRamadanTest() {
 		Ramadan ramadan = new Ramadan(1, "4:19 AM","12:11 PM","3:16 PM","5:16 PM","7:20 PM");
 		
-		Mockito.when(this.service.addDay(ramadan)).thenReturn(ramadan);
+		Mockito.when(this.service.deleteDay(1)).thenReturn(true);
 		
-		ResponseEntity<Ramadan> response = new ResponseEntity<Ramadan>(ramadan, HttpStatus.NO_CONTENT);
+		ResponseEntity<Ramadan> response = new ResponseEntity<Ramadan>( HttpStatus.NO_CONTENT);
 		
 		assertThat(response).isEqualTo(this.controller.deleteRamadan(1));
 		
