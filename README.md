@@ -16,11 +16,15 @@ Project Aims:
 -To illustrate my knowledge of the tools learned during the bootcamp
 
 Project objectives:
+
 -To create a Spring Boot API, with utilisation of supporting tools, methodologies, and technologies, that encapsulates all fundamental and practical modules covered during training.
+
 How I expected the challenge to go.
+
 -I was confident in implementing the main concepts and deliverables required.however, i was expecting some difficulty when it came to the testing stage, which occurred but i corrected that soon after.
 
 What went well? / What didn't go as planned?
+
 -firstly,things that went well was that i completed the deliverables checklist for this project
 Things that could have gone better:
 -Implementing the stretch goals to showcase my skills even more.
@@ -33,7 +37,7 @@ Jira:https://ramadanproject.atlassian.net/jira/software/projects/RAM/boards/1/ro
 
 ![image](https://user-images.githubusercontent.com/97948321/158983554-5f0cd8e0-d9e8-411f-964c-3ee53dd6be39.png)
 
-Risk Assessment: here's a scheenshot of my Risk Assessment,however it can also be found in my documents folder.
+Risk Assessment: here's a screenshot of my Risk Assessment,however it can also be found in my documents folder.
 
 ![image](https://user-images.githubusercontent.com/97948321/158976375-6cc8839c-87bb-462c-83de-4388bac7d864.png)
 
