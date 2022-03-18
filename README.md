@@ -86,6 +86,8 @@ Screenshot of my Test coverage:
 
 
 
+my GitHub timeline:
+![image](https://user-images.githubusercontent.com/97948321/159049393-fef858cf-870a-4592-89c8-dcf06a394a4f.png)
 
 
 
