@@ -12,8 +12,10 @@ Automated Testing (JUnit)
 
 
 Project Aims:
+
 -To gain crucial practical experience in using the tools I studied during the bootcamp to create a functional product
--To illustrate my knowledge of the tools learned during the bootcamp
+
+-gain deeper understanding of the development cycle.
 
 Project objectives:
 
